@@ -36,7 +36,7 @@ tree.addRightNode(tree.root.right, 6)
 tree.addRightNode(tree.root.left, 4)
 
 
-//O(n) solution that does a preorder search over the tree
+//O(n) solution that does a preorder traversal over the tree
 
 let result = []
 
@@ -47,6 +47,7 @@ function dfs(node, level) {
         return
     }
 
+    //If the level is unvisited, create an empty array to push values into
     let arr = result[level]
     if (!arr) {
         arr = []
